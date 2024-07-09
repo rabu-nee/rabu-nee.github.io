@@ -1,0 +1,191 @@
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Calibri";
+    background-color: #040404;
+    color: #4C4863;
+    position: relative;
+    background: transparent;
+}
+
+    body::before {
+        content: "";
+        position: fixed;
+        background-size: cover;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+
+@media (min-width: 1024px) {
+    body::before {
+        background-attachment: fixed;
+    }
+}
+
+a {
+    color: #52CDFF;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    a:hover {
+        color: #FF8CA8;
+        text-decoration: none;
+    }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Georgia";
+    color: #FF8CA8;
+}
+
+img {
+    pointer-events: none;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+    padding-top: 40px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+    .portfolio-details .container {
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+
+    .portfolio-details .portfolio-title {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-details .portfolio-info {
+        padding-top: 45px;
+    }
+
+        .portfolio-details .portfolio-info h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-details .portfolio-info ul {
+            list-style: none;
+            padding: 0;
+            font-size: 15px;
+        }
+
+        .portfolio-details .portfolio-info .nested {
+            padding-inline-start: 20px;
+        }
+
+        .portfolio-details .portfolio-info ul li + li {
+            margin-top: 10px;
+        }
+
+        .portfolio-details .portfolio-info p {
+            font-size: 15px;
+            padding: 15px 0 0 0;
+        }
+
+        .portfolio-details .portfolio-info .credit {
+            font-size: 0.8rem;
+        }
+
+
+.swiper-wrapper {
+}
+
+.swiper-slide img {
+    max-height: 70vh;
+    width: auto;
+    max-width: 100%;
+    margin: auto;
+    display: block;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+    .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+@media (max-width: 992px) {
+    .portfolio-details .portfolio-info {
+        padding-top: 20px;
+    }
+}
+
+.portfolio-details .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+
+    .portfolio-details .swiper-pagination .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+        background-color: rgb(198, 198, 198);
+    }
+
+    .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
+        background-color: #52CDFF;
+    }
+
+
+@keyframes animate-loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*--------------------------------------------------------------
+# Credits
+--------------------------------------------------------------*/
+.credits {
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    text-align: right;
+    font-size: 13px;
+    z-index: 999999;
+}
+
+@media (max-width: 992px) {
+    .credits {
+        /*        text-align: center;
+        padding: 10px;
+        color: #fff;
+        background: rgba(0, 0, 0, 0.8);*/
+        display: none;
+    }
+}
